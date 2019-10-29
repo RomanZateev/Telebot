@@ -6,7 +6,7 @@ from telebot.types import Message
 from telebot import apihelper
 
 apihelper.proxy = {
- "https": "http://146.88.51.237:80",
+ "https": "http://106.51.80.132:8080",
 }
 
 token = '972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM'
