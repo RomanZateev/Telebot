@@ -1,1 +1,1 @@
-worker: Bottelebot.py
+web: python3 Bottelebot.py
