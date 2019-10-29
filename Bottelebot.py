@@ -14,8 +14,8 @@ token = '972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM'
 bot = telebot.TeleBot(f'{token}')
 
 # setWebhook нужен сертификат
-bot.remove_webhook()
-bot.set_webhook(url=f'young-wildwood-28747.herokuapp.com/{token}')
+#bot.remove_webhook()
+#bot.set_webhook(url=f'young-wildwood-28747.herokuapp.com/{token}')
 # unset webhook
 # bot.remove_webhook()
 
