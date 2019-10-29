@@ -25,3 +25,9 @@ def send_welcome(message: Message):
     )
 
 bot.polling(timeout=60)
+
+
+for target_list in expression_list:
+    pass
+else:
+    pass
