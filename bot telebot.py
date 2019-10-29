@@ -1,0 +1,27 @@
+import telebot
+import json
+import random
+
+from telebot.types import Message
+from telebot import apihelper
+
+apihelper.proxy = {
+ "https": "http://132.255.23.157:3128",
+}
+
+bot = telebot.TeleBot("972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM")
+
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome(message):
+	bot.reply_to(message, 
+    "Привет! Меня зовут Брокулятор и я помогу тебе найти брокера под твой запрос. Я знаком с 7 лучшими брокерами, у которых есть нужные лицензии. Все они проверены временем и тысячами клиентов, так что предложу тебе парочку хороших вариантов.")
+
+with open('questions.json') as json_file:
+    data = json.load(json_file)
+
+@bot.message_handler(commands=['go'])
+def send_welcome(message: Message):
+	bot.reply_to(message.text, 
+    )
+
+bot.polling(timeout=60)
