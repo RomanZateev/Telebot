@@ -11,6 +11,11 @@ apihelper.proxy = {
 
 bot = telebot.TeleBot("972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM")
 
+# setWebhook нужен сертификат
+bot.set_webhook(url="http://example.com", certificate=open('mycert.pem'))
+# unset webhook
+bot.remove_webhook()
+
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
 	bot.reply_to(message, 
@@ -25,9 +30,3 @@ def send_welcome(message: Message):
     )
 
 bot.polling(timeout=60)
-
-
-for target_list in expression_list:
-    pass
-else:
-    pass
