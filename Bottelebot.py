@@ -9,10 +9,13 @@ apihelper.proxy = {
  "https": "http://146.88.51.237:80",
 }
 
-bot = telebot.TeleBot("972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM")
+token = '972242987:AAEBckYsY4kxn9C362DCCfdNUH8p4NNOsKM'
+
+bot = telebot.TeleBot(f'{token}')
 
 # setWebhook нужен сертификат
-# bot.set_webhook(url="http://example.com", certificate=open('mycert.pem'))
+bot.remove_webhook()
+bot.set_webhook(url=f'young-wildwood-28747.herokuapp.com/{token}')
 # unset webhook
 # bot.remove_webhook()
 
